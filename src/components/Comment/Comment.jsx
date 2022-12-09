@@ -1,15 +1,13 @@
 import { faker } from '@faker-js/faker/locale/pt_PT';
 import { PencilLine, ThumbsUp, Trash } from 'phosphor-react';
+import { Avatar } from '../Avatar/Avatar';
 
 import styles from './Comment.module.css';
 
 export function Comment() {
   return (
     <div className={styles.comment}>
-      <img
-        className={styles.avatar}
-        src={faker.image.cats(100, 100, true)} alt=""
-      />
+      <Avatar hasBorder={false} />
 
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>

@@ -1,5 +1,6 @@
 import { faker } from '@faker-js/faker/locale/pt_PT';
 import { PencilLine } from 'phosphor-react';
+import { Avatar } from '../Avatar/Avatar';
 import { Comment } from '../Comment/Comment';
 
 import styles from './Post.module.css';
@@ -9,10 +10,7 @@ export function Post() {
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img
-            className={styles.avatar}
-            src={faker.image.cats(100, 100, true)} alt=""
-          />
+          <Avatar />
           <div className={styles.authorInfo}>
             <strong>{faker.name.fullName()}</strong>
             <span>{faker.name.jobArea()}</span>
